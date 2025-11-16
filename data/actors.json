@@ -1,1 +1,302 @@
-[]
+[
+  {
+    "id": "1",
+    "name": "Brad Pitt",
+    "PinyinInitial": "b",
+    "characters": []
+  },
+  {
+    "id": "2",
+    "name": "Penn Jillette",
+    "PinyinInitial": "p",
+    "characters": []
+  },
+  {
+    "id": "3",
+    "name": "Michael Jackson",
+    "PinyinInitial": "m",
+    "characters": []
+  },
+  {
+    "id": "4",
+    "name": "Philip Richard",
+    "PinyinInitial": "f",
+    "characters": []
+  },
+  {
+    "id": "5",
+    "name": "Danny Devito",
+    "PinyinInitial": "d",
+    "characters": []
+  },
+  {
+    "id": "6",
+    "name": "Tristan",
+    "PinyinInitial": "t",
+    "characters": []
+  },
+  {
+    "id": "7",
+    "name": "Nathan",
+    "PinyinInitial": "n",
+    "characters": []
+  },
+  {
+    "id": "8",
+    "name": "Luke Johnathan",
+    "PinyinInitial": "L",
+    "characters": []
+  },
+  {
+    "id": "9",
+    "name": "Gaby",
+    "PinyinInitial": "g",
+    "characters": []
+  },
+  {
+    "id": "10",
+    "name": "Keenan",
+    "PinyinInitial": "k",
+    "characters": []
+  },
+  {
+    "id": "11",
+    "name": "Hans (Hansi)",
+    "PinyinInitial": "h",
+    "characters": []
+  },
+  {
+    "id": "12",
+    "name": "Jojo Blaisek",
+    "PinyinInitial": "zh",
+    "characters": []
+  },
+  {
+    "id": "13",
+    "name": "Shaquille Oneil",
+    "PinyinInitial": "sh",
+    "characters": []
+  },
+  {
+    "id": "14",
+    "name": "Zefa",
+    "PinyinInitial": "z",
+    "characters": []
+  },
+  {
+    "id": "15",
+    "name": "Carlo",
+    "PinyinInitial": "c",
+    "characters": []
+  },
+  {
+    "id": "16",
+    "name": "Sean",
+    "PinyinInitial": "s",
+    "characters": []
+  },
+  {
+    "id": "17",
+    "name": "Intesar",
+    "PinyinInitial": "y",
+    "characters": []
+  },
+  {
+    "id": "18",
+    "name": "Bani",
+    "PinyinInitial": "bi",
+    "characters": []
+  },
+  {
+    "id": "19",
+    "name": "Prudence",
+    "PinyinInitial": "pi",
+    "characters": []
+  },
+  {
+    "id": "20",
+    "name": "Mishel",
+    "PinyinInitial": "mi",
+    "characters": []
+  },
+  {
+    "id": "21",
+    "name": "Danika",
+    "PinyinInitial": "di",
+    "characters": []
+  },
+  {
+    "id": "22",
+    "name": "Naomi",
+    "PinyinInitial": "ni",
+    "characters": []
+  },
+  {
+    "id": "23",
+    "name": "Leewin (JJ)",
+    "PinyinInitial": "li",
+    "characters": []
+  },
+  {
+    "id": "24",
+    "name": "Kiera",
+    "PinyinInitial": "qi",
+    "characters": []
+  },
+  {
+    "id": "25",
+    "name": "Shireen",
+    "PinyinInitial": "xi",
+    "characters": []
+  },
+  {
+    "id": "26",
+    "name": "Wario",
+    "PinyinInitial": "w",
+    "characters": []
+  },
+  {
+    "id": "27",
+    "name": "Batman",
+    "PinyinInitial": "bu",
+    "characters": []
+  },
+  {
+    "id": "28",
+    "name": "Parry the Platypus",
+    "PinyinInitial": "pu",
+    "characters": []
+  },
+  {
+    "id": "29",
+    "name": "Mugen (Aizen)",
+    "PinyinInitial": "mu",
+    "characters": []
+  },
+  {
+    "id": "30",
+    "name": "Ferb",
+    "PinyinInitial": "fu",
+    "characters": []
+  },
+  {
+    "id": "31",
+    "name": "Duragoneel (Natsu)",
+    "PinyinInitial": "du",
+    "characters": []
+  },
+  {
+    "id": "32",
+    "name": "Naruto",
+    "PinyinInitial": "nu",
+    "characters": []
+  },
+  {
+    "id": "33",
+    "name": "Luffy",
+    "PinyinInitial": "lu",
+    "characters": []
+  },
+  {
+    "id": "34",
+    "name": "Gurren Laggan",
+    "PinyinInitial": "gu",
+    "characters": []
+  },
+  {
+    "id": "35",
+    "name": "Klein Morreti",
+    "PinyinInitial": "ku",
+    "characters": []
+  },
+  {
+    "id": "36",
+    "name": "Shurlock Homes",
+    "PinyinInitial": "shu",
+    "characters": []
+  },
+  {
+    "id": "37",
+    "name": "Robin",
+    "PinyinInitial": "ru",
+    "characters": []
+  },
+  {
+    "id": "38",
+    "name": "Zoro",
+    "PinyinInitial": "zu",
+    "characters": []
+  },
+  {
+    "id": "39",
+    "name": "Courage (the Cowardly Dog)",
+    "PinyinInitial": "cu",
+    "characters": []
+  },
+  {
+    "id": "40",
+    "name": "Sun Wukong",
+    "PinyinInitial": "su",
+    "characters": []
+  },
+  {
+    "id": "41",
+    "name": "",
+    "PinyinInitial": "ch",
+    "characters": []
+  },
+  {
+    "id": "42",
+    "name": "",
+    "PinyinInitial": "ti",
+    "characters": []
+  },
+  {
+    "id": "43",
+    "name": "",
+    "PinyinInitial": "tu",
+    "characters": []
+  },
+  {
+    "id": "44",
+    "name": "",
+    "PinyinInitial": "hu",
+    "characters": []
+  },
+  {
+    "id": "45",
+    "name": "",
+    "PinyinInitial": "zhu",
+    "characters": []
+  },
+  {
+    "id": "46",
+    "name": "",
+    "PinyinInitial": "chu",
+    "characters": []
+  },
+  {
+    "id": "47",
+    "name": "Rama",
+    "PinyinInitial": "r",
+    "characters": []
+  },
+  {
+    "id": "48",
+    "name": "Jiwoo",
+    "PinyinInitial": "ji",
+    "characters": []
+  },
+  {
+    "id": "49",
+    "name": "Charlie Chaplin",
+    "PinyinInitial": "ch",
+    "characters": []
+  },
+    {
+    "id": "50",
+    "name": "Jesus",
+    "PinyinInitial": "ju",
+    "characters": []
+  }
+]

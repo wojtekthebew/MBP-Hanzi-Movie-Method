@@ -6,7 +6,7 @@ from typing import List, Dict, Optional
 class Actor:
     id: str
     name: str
-    description: str = ""
+    PinyinInitial: str = ""
     characters: List[str] = None
     
     def __post_init__(self):
