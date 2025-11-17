@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": "1",
+    "name": "Gamelan",
+    "tone_sections": {
+      "1": "Tempat rokok",
+      "2": "Kitchen",
+      "3": "Bedroon",
+      "4": "Toilet",
+      "5": "Masjid"
+    },
+    "characters": [
+      "1"
+    ]
+  }
+]

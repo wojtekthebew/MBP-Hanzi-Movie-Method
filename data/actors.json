@@ -30,12 +30,6 @@
     "characters": []
   },
   {
-    "id": "6",
-    "name": "Tristan",
-    "PinyinInitial": "t",
-    "characters": []
-  },
-  {
     "id": "7",
     "name": "Nathan",
     "PinyinInitial": "n",
@@ -44,7 +38,7 @@
   {
     "id": "8",
     "name": "Luke Johnathan",
-    "PinyinInitial": "L",
+    "PinyinInitial": "l",
     "characters": []
   },
   {
@@ -242,61 +236,93 @@
   {
     "id": "41",
     "name": "",
-    "PinyinInitial": "ch",
+    "PinyinInitial": "ti",
     "characters": []
   },
   {
     "id": "42",
     "name": "",
-    "PinyinInitial": "ti",
+    "PinyinInitial": "tu",
     "characters": []
   },
   {
     "id": "43",
     "name": "",
-    "PinyinInitial": "tu",
+    "PinyinInitial": "hu",
     "characters": []
   },
   {
     "id": "44",
     "name": "",
-    "PinyinInitial": "hu",
-    "characters": []
-  },
-  {
-    "id": "45",
-    "name": "",
     "PinyinInitial": "zhu",
     "characters": []
   },
   {
-    "id": "46",
-    "name": "",
+    "id": "45",
+    "name": "chewbacca",
     "PinyinInitial": "chu",
     "characters": []
   },
   {
-    "id": "47",
+    "id": "46",
     "name": "Rama",
     "PinyinInitial": "r",
     "characters": []
   },
   {
-    "id": "48",
+    "id": "47",
     "name": "Jiwoo",
     "PinyinInitial": "ji",
-    "characters": []
+    "characters": [
+      "1"
+    ]
   },
   {
-    "id": "49",
+    "id": "48",
     "name": "Charlie Chaplin",
     "PinyinInitial": "ch",
     "characters": []
   },
-    {
-    "id": "50",
+  {
+    "id": "49",
     "name": "Jesus",
     "PinyinInitial": "ju",
+    "characters": []
+  },
+  {
+    "id": "6",
+    "name": "Andrew Tate",
+    "PinyinInitial": "t",
+    "characters": []
+  },
+  {
+    "id": "50",
+    "name": "Yuhawaba",
+    "PinyinInitial": "yu",
+    "characters": []
+  },
+  {
+    "id": "51",
+    "name": "",
+    "PinyinInitial": "nü",
+    "characters": []
+  },
+  {
+    "id": "52",
+    "name": "",
+    "PinyinInitial": "lü",
+    "characters": []
+  },
+  {
+    "id": "53",
+    "name": "",
+    "PinyinInitial": "qu",
+    "characters": []
+  },
+  {
+    "id": "54",
+    "name": "",
+    "PinyinInitial": "xu",
     "characters": []
   }
 ]

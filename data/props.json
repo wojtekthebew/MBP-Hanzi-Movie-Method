@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "id": "1",
+    "name": "Banana",
+    "category": "1",
+    "components": "ㄦ",
+    "used_by": [
+      "1"
+    ]
+  }
+]

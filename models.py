@@ -1,6 +1,6 @@
-# models.py
+# models.py0
 from dataclasses import dataclass, asdict
-from typing import List, Dict, Optional
+from typing import List, Dict
 
 @dataclass
 class Actor:
@@ -35,7 +35,7 @@ class Prop:
     id: str
     name: str
     category: str = "general"
-    components: List[str] = None
+    components: List[str] = None  # Fixed: changed from str to List[str]
     used_by: List[str] = None
     
     def __post_init__(self):

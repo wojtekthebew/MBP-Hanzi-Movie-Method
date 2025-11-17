@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": "1",
+    "hanzi": "儿",
+    "pinyin": "Er",
+    "meaning": "Child",
+    "actor": "47",
+    "set_location": "1",
+    "tone_section": 2,
+    "props": [
+      "1"
+    ],
+    "memory_scene": "Shaq eats a Banana and turns into a child",
+    "audio_file": ""
+  }
+]
