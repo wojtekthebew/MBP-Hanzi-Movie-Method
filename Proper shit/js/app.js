@@ -8,6 +8,53 @@ import CharacterManager from './character-manager.js';
 import SearchManager from './search-manager.js';
 import QuickAddManager from './quick-add-manager.js';
 
+// Add convertPinyinWithTones here (same as in search-manager.js)
+function convertPinyinWithTones(input) {
+    const toneMap = {
+        a: ["ā", "á", "ǎ", "à"],
+        e: ["ē", "é", "ě", "è"],
+        i: ["ī", "í", "ǐ", "ì"],
+        o: ["ō", "ó", "ǒ", "ò"],
+        u: ["ū", "ú", "ǔ", "ù"],
+        ü: ["ǖ", "ǘ", "ǚ", "ǜ"],
+    };
+    input = input.replace(/v/g, "ü");
+    const compoundVowels = [
+        'ao', 'ai', 'ei', 'ou',
+        'ia', 'iao', 'ie', 'iu', 'iou',
+        'ua', 'uo', 'uai', 'uei', 'ui',
+        'üe'
+    ];
+    let toneNumber = input.match(/[1-4]/)?.[0];
+    if (!toneNumber) return input.replace(/[1-5]/g, "");
+    let withoutTone = input.replace(/[1-5]/g, "");
+    for (let compound of compoundVowels) {
+        if (withoutTone.includes(compound)) {
+            if (compound === 'iu' || compound === 'ui' || compound === 'iou') {
+                const lastVowel = compound[compound.length - 1];
+                const replacement = toneMap[lastVowel][toneNumber - 1];
+                return withoutTone.replace(compound, compound.slice(0, -1) + replacement);
+            } else if (compound.includes('a')) {
+                const replacement = toneMap['a'][toneNumber - 1];
+                return withoutTone.replace('a', replacement);
+            } else if (compound.includes('e')) {
+                const replacement = toneMap['e'][toneNumber - 1];
+                return withoutTone.replace('e', replacement);
+            } else if (compound.includes('o')) {
+                const replacement = toneMap['o'][toneNumber - 1];
+                return withoutTone.replace('o', replacement);
+            }
+        }
+    }
+    for (let vowel of ['a', 'e', 'o', 'i', 'u', 'ü']) {
+        if (withoutTone.includes(vowel)) {
+            const replacement = toneMap[vowel][toneNumber - 1];
+            return withoutTone.replace(vowel, replacement);
+        }
+    }
+    return withoutTone;
+}
+
 class App {
     constructor() {
         this.dataManager = new DataManager();
@@ -174,12 +221,14 @@ class App {
         
         targetContainer.innerHTML = props.map(prop => {
             const charCount = this.propManager.getCharacterCount(prop.id);
+            // ensure components is safely displayed
+            const componentsText = Array.isArray(prop.components) ? prop.components.join(', ') : (prop.components || 'None');
             return `
                 <div class="item-card">
                     ${prop.image ? `<img src="${prop.image}" style="max-width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-bottom: 10px;">` : ''}
                     <h4>${prop.name} <span class="character-count">${charCount}</span></h4>
                     <p>Category: ${prop.category}</p>
-                    <p>Components: ${prop.components ? prop.components.join(', ') : 'None'}</p>
+                    <p>Components: ${componentsText}</p>
                     <p>Used by: ${charCount} characters</p>
                     <div class="item-actions">
                         <button class="edit-btn" onclick="app.editProp('${prop.id}')">Edit</button>
@@ -202,9 +251,11 @@ class App {
         }
         
         targetContainer.innerHTML = characters.map(character => {
+            // ensure props is an array before using includes
             const actor = this.dataManager.DATA.ACTORS.find(a => a.id === character.actor);
             const set = this.dataManager.DATA.SETS.find(s => s.id === character.set_location);
-            const characterProps = this.dataManager.DATA.PROPS.filter(p => character.props.includes(p.id));
+            const charPropIds = Array.isArray(character.props) ? character.props : (character.props ? [character.props] : []);
+            const characterProps = this.dataManager.DATA.PROPS.filter(p => charPropIds.includes(p.id));
             
             let toneSectionDisplay = character.tone_section;
             if (set && set.tone_sections && set.tone_sections[character.tone_section]) {
@@ -474,19 +525,39 @@ class App {
             const characterId = document.getElementById('characterId').value;
             const selectedProps = Array.from(document.getElementById('charProps').selectedOptions).map(opt => opt.value);
             const img = await FileUtils.getImageDataURL(document.getElementById('charImage'));
-            
+
+            // --- pinyin conversion ---
+            let rawPinyin = document.getElementById('charPinyin').value;
+            let convertedPinyin = convertPinyinWithTones(rawPinyin);
+
+            // --- tone section logic ---
+            let toneSectionInput = document.getElementById('charToneSection').value;
+            let toneSection = toneSectionInput;
+            if (!toneSection) {
+                // If not specified, use pinyin tone number if present and set location has that section
+                let pinyinTone = rawPinyin.match(/[1-5]/)?.[0];
+                const setId = document.getElementById('charSet').value;
+                const selectedSet = this.setManager.getById(setId);
+                if (selectedSet && pinyinTone && selectedSet.tone_sections && selectedSet.tone_sections[pinyinTone]) {
+                    toneSection = pinyinTone;
+                } else {
+                    // fallback: first available section
+                    toneSection = Object.keys(selectedSet?.tone_sections || {})[0] || '';
+                }
+            }
+
             const characterData = {
                 hanzi: document.getElementById('charHanzi').value,
-                pinyin: document.getElementById('charPinyin').value,
+                pinyin: convertedPinyin,
                 meaning: document.getElementById('charMeaning').value,
                 actor: document.getElementById('charActor').value,
                 set_location: document.getElementById('charSet').value,
-                tone_section: document.getElementById('charToneSection').value,
+                tone_section: toneSection,
                 props: selectedProps,
                 plot: document.getElementById('charPlot').value,
                 image: img || document.getElementById('charImage').dataset.imageUrl || ''
             };
-            
+
             if (characterId) {
                 this.characterManager.validateAndUpdate(characterId, characterData);
                 this.uiManager.showAlert('Character updated successfully');
@@ -494,7 +565,7 @@ class App {
                 this.characterManager.validateAndCreate(characterData);
                 this.uiManager.showAlert('Character added successfully');
             }
-            
+
             this.resetCharacterForm();
             this.refreshLists();
         } catch (error) {

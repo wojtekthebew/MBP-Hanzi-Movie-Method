@@ -32,14 +32,17 @@ class FileUtils {
     static normalizeSeedData(key, arr) {
         if (!Array.isArray(arr)) return [];
         
-        switch(key) {
-            case 'Proper shit/data/props.json':
+        // normalize based on filename (robust to path differences)
+        const fname = (typeof key === 'string') ? key.split('/').pop().toLowerCase() : '';
+        
+        switch(fname) {
+            case 'props.json':
                 return arr.map(p => this.normalizeProp(p));
-            case 'Proper shit/data/sets.json':
+            case 'sets.json':
                 return arr.map(s => this.normalizeSet(s));
-            case 'Proper shit/data/characters.json':
+            case 'characters.json':
                 return arr.map(c => this.normalizeCharacter(c));
-            case 'Proper shit/data/actors.json':
+            case 'actors.json':
                 return arr.map(a => this.normalizeActor(a));
             default:
                 return arr;
@@ -54,12 +57,14 @@ class FileUtils {
             prop.components = [];
         }
         if (!Array.isArray(prop.used_by)) prop.used_by = [];
+        if (typeof prop.image !== 'string') prop.image = prop.image || '';
         return prop;
     }
 
     static normalizeSet(set) {
         if (typeof set.tone_sections !== 'object' || set.tone_sections === null) set.tone_sections = {};
         if (!Array.isArray(set.characters)) set.characters = [];
+        if (typeof set.image !== 'string') set.image = set.image || '';
         return set;
     }
 
@@ -67,11 +72,13 @@ class FileUtils {
         if (!Array.isArray(character.props)) {
             character.props = Array.isArray(character.props) ? character.props : (character.props ? [character.props] : []);
         }
+        if (typeof character.image !== 'string') character.image = character.image || '';
         return character;
     }
 
     static normalizeActor(actor) {
         if (!Array.isArray(actor.characters)) actor.characters = [];
+        if (typeof actor.image !== 'string') actor.image = actor.image || '';
         return actor;
     }
 }
