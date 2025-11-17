@@ -3,276 +3,322 @@
     "id": "1",
     "name": "Brad Pitt",
     "PinyinInitial": "b",
+    "image": "",
     "characters": []
   },
   {
     "id": "2",
     "name": "Penn Jillette",
     "PinyinInitial": "p",
+    "image": "",
     "characters": []
   },
   {
     "id": "3",
     "name": "Michael Jackson",
     "PinyinInitial": "m",
+    "image": "",
     "characters": []
   },
   {
     "id": "4",
     "name": "Philip Richard",
     "PinyinInitial": "f",
+    "image": "",
     "characters": []
   },
   {
     "id": "5",
     "name": "Danny Devito",
     "PinyinInitial": "d",
+    "image": "",
     "characters": []
   },
   {
     "id": "7",
     "name": "Nathan",
     "PinyinInitial": "n",
+    "image": "",
     "characters": []
   },
   {
     "id": "8",
     "name": "Luke Johnathan",
     "PinyinInitial": "l",
+    "image": "",
     "characters": []
   },
   {
     "id": "9",
     "name": "Gaby",
     "PinyinInitial": "g",
+    "image": "",
     "characters": []
   },
   {
     "id": "10",
     "name": "Keenan",
     "PinyinInitial": "k",
+    "image": "",
     "characters": []
   },
   {
     "id": "11",
     "name": "Hans (Hansi)",
     "PinyinInitial": "h",
+    "image": "",
     "characters": []
   },
   {
     "id": "12",
     "name": "Jojo Blaisek",
     "PinyinInitial": "zh",
+    "image": "",
     "characters": []
   },
   {
     "id": "13",
     "name": "Shaquille Oneil",
     "PinyinInitial": "sh",
+    "image": "",
     "characters": []
   },
   {
     "id": "14",
     "name": "Zefa",
     "PinyinInitial": "z",
+    "image": "",
     "characters": []
   },
   {
     "id": "15",
     "name": "Carlo",
     "PinyinInitial": "c",
+    "image": "",
     "characters": []
   },
   {
     "id": "16",
     "name": "Sean",
     "PinyinInitial": "s",
+    "image": "",
     "characters": []
   },
   {
     "id": "17",
     "name": "Intesar",
     "PinyinInitial": "y",
+    "image": "",
     "characters": []
   },
   {
     "id": "18",
     "name": "Bani",
     "PinyinInitial": "bi",
+    "image": "",
     "characters": []
   },
   {
     "id": "19",
     "name": "Prudence",
     "PinyinInitial": "pi",
+    "image": "",
     "characters": []
   },
   {
     "id": "20",
     "name": "Mishel",
     "PinyinInitial": "mi",
+    "image": "",
     "characters": []
   },
   {
     "id": "21",
     "name": "Danika",
     "PinyinInitial": "di",
+    "image": "",
     "characters": []
   },
   {
     "id": "22",
     "name": "Naomi",
     "PinyinInitial": "ni",
+    "image": "",
     "characters": []
   },
   {
     "id": "23",
     "name": "Leewin (JJ)",
     "PinyinInitial": "li",
+    "image": "",
     "characters": []
   },
   {
     "id": "24",
     "name": "Kiera",
     "PinyinInitial": "qi",
+    "image": "",
     "characters": []
   },
   {
     "id": "25",
     "name": "Shireen",
     "PinyinInitial": "xi",
+    "image": "",
     "characters": []
   },
   {
     "id": "26",
     "name": "Wario",
     "PinyinInitial": "w",
+    "image": "",
     "characters": []
   },
   {
     "id": "27",
     "name": "Batman",
     "PinyinInitial": "bu",
+    "image": "",
     "characters": []
   },
   {
     "id": "28",
     "name": "Parry the Platypus",
     "PinyinInitial": "pu",
+    "image": "",
     "characters": []
   },
   {
     "id": "29",
     "name": "Mugen (Aizen)",
     "PinyinInitial": "mu",
+    "image": "",
     "characters": []
   },
   {
     "id": "30",
     "name": "Ferb",
     "PinyinInitial": "fu",
+    "image": "",
     "characters": []
   },
   {
     "id": "31",
     "name": "Duragoneel (Natsu)",
     "PinyinInitial": "du",
+    "image": "",
     "characters": []
   },
   {
     "id": "32",
     "name": "Naruto",
     "PinyinInitial": "nu",
+    "image": "",
     "characters": []
   },
   {
     "id": "33",
     "name": "Luffy",
     "PinyinInitial": "lu",
+    "image": "",
     "characters": []
   },
   {
     "id": "34",
     "name": "Gurren Laggan",
     "PinyinInitial": "gu",
+    "image": "",
     "characters": []
   },
   {
     "id": "35",
     "name": "Klein Morreti",
     "PinyinInitial": "ku",
+    "image": "",
     "characters": []
   },
   {
     "id": "36",
     "name": "Shurlock Homes",
     "PinyinInitial": "shu",
+    "image": "",
     "characters": []
   },
   {
     "id": "37",
     "name": "Robin",
     "PinyinInitial": "ru",
+    "image": "",
     "characters": []
   },
   {
     "id": "38",
     "name": "Zoro",
     "PinyinInitial": "zu",
+    "image": "",
     "characters": []
   },
   {
     "id": "39",
     "name": "Courage (the Cowardly Dog)",
     "PinyinInitial": "cu",
+    "image": "",
     "characters": []
   },
   {
     "id": "40",
     "name": "Sun Wukong",
     "PinyinInitial": "su",
+    "image": "",
     "characters": []
   },
   {
     "id": "41",
     "name": "",
     "PinyinInitial": "ti",
+    "image": "",
     "characters": []
   },
   {
     "id": "42",
     "name": "",
     "PinyinInitial": "tu",
+    "image": "",
     "characters": []
   },
   {
     "id": "43",
     "name": "",
     "PinyinInitial": "hu",
+    "image": "",
     "characters": []
   },
   {
     "id": "44",
     "name": "",
     "PinyinInitial": "zhu",
+    "image": "",
     "characters": []
   },
   {
     "id": "45",
     "name": "chewbacca",
     "PinyinInitial": "chu",
+    "image": "",
     "characters": []
   },
   {
     "id": "46",
     "name": "Rama",
     "PinyinInitial": "r",
+    "image": "",
     "characters": []
   },
   {
     "id": "47",
     "name": "Jiwoo",
     "PinyinInitial": "ji",
+    "image": "",
     "characters": [
       "1"
     ]
@@ -281,48 +327,56 @@
     "id": "48",
     "name": "Charlie Chaplin",
     "PinyinInitial": "ch",
+    "image": "",
     "characters": []
   },
   {
     "id": "49",
     "name": "Jesus",
     "PinyinInitial": "ju",
+    "image": "",
     "characters": []
   },
   {
     "id": "6",
     "name": "Andrew Tate",
     "PinyinInitial": "t",
+    "image": "",
     "characters": []
   },
   {
     "id": "50",
     "name": "Yuhawaba",
     "PinyinInitial": "yu",
+    "image": "",
     "characters": []
   },
   {
     "id": "51",
     "name": "",
     "PinyinInitial": "nü",
+    "image": "",
     "characters": []
   },
   {
     "id": "52",
     "name": "",
     "PinyinInitial": "lü",
+    "image": "",
     "characters": []
   },
   {
     "id": "53",
     "name": "",
     "PinyinInitial": "qu",
+    "image": "",
     "characters": []
   },
   {
     "id": "54",
     "name": "",
     "PinyinInitial": "xu",
+    "image": "",
     "characters": []
   }
 ]
