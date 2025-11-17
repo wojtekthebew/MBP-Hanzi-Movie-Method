@@ -76,6 +76,73 @@ class DataManager {
             redoBtn.disabled = this.HISTORY.future.length === 0;
         }
     }
+
+    // Quick Add Modal integration
+    openQuickAddModal(type) {
+        const modal = document.getElementById('quickAddModal');
+        const form = modal.querySelector('form');
+        form.reset();
+        form.dataset.type = type;
+        
+        const title = modal.querySelector('h2');
+        title.textContent = `Quick Add ${type.charAt(0).toUpperCase() + type.slice(1)}`;
+        
+        modal.style.display = 'block';
+    }
+
+    closeQuickAddModal() {
+        const modal = document.getElementById('quickAddModal');
+        modal.style.display = 'none';
+    }
+
+    submitQuickAddForm(event) {
+        event.preventDefault();
+        
+        const form = event.target;
+        const type = form.dataset.type;
+        
+        const newItem = {
+            id: this.getNextId(this.DATA[type]),
+            name: form.name.value,
+            description: form.description.value,
+            image: form.image.files[0] ? URL.createObjectURL(form.image.files[0]) : ''
+        };
+        
+        this.DATA[type].push(newItem);
+        this.saveState();
+        
+        this.closeQuickAddModal();
+    }
+
+    // Complete search function
+    search(query) {
+        query = query.toLowerCase();
+        const results = {
+            ACTORS: [],
+            SETS: [],
+            PROPS: [],
+            CHARACTERS: []
+        };
+        
+        for (const type in this.DATA) {
+            results[type] = this.DATA[type].filter(item => 
+                item.name.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query)
+            );
+        }
+        
+        return results;
+    }
+
+    // Image handling
+    handleImageUpload(event, targetElementId) {
+        const file = event.target.files[0];
+        if (file) {
+            const imgElement = document.getElementById(targetElementId);
+            imgElement.src = URL.createObjectURL(file);
+            imgElement.style.display = 'block';
+        }
+    }
 }
 
 export default DataManager;
