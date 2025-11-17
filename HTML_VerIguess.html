@@ -151,12 +151,17 @@
     </div>
 
     <script>
-        // Data storage using localStorage
+        // Add file constants and use them as storage keys
+        const ACTOR_FILE = 'data/actors.json';
+        const SET_FILE = 'data/sets.json';
+        const PROP_FILE = 'data/props.json';
+        const CHARACTER_FILE = 'data/characters.json';
+
         const STORAGE_KEYS = {
-            ACTORS: 'drama_actors',
-            SETS: 'drama_sets',
-            PROPS: 'drama_props',
-            CHARACTERS: 'drama_characters'
+            ACTORS: ACTOR_FILE,
+            SETS: SET_FILE,
+            PROPS: PROP_FILE,
+            CHARACTERS: CHARACTER_FILE
         };
 
         // Utility functions
@@ -173,6 +178,30 @@
 
         function saveData(key, data) {
             localStorage.setItem(key, JSON.stringify(data));
+        }
+
+        // Seed localStorage from project files on first run
+        async function ensureSeedData() {
+            // Seed actors from data/actors.json if not present
+            if (!localStorage.getItem(ACTOR_FILE)) {
+                try {
+                    const res = await fetch(ACTOR_FILE);
+                    if (res.ok) {
+                        const data = await res.json();
+                        localStorage.setItem(ACTOR_FILE, JSON.stringify(data));
+                    } else {
+                        localStorage.setItem(ACTOR_FILE, JSON.stringify([]));
+                    }
+                } catch (e) {
+                    // Network/file load failed — create empty fallback
+                    localStorage.setItem(ACTOR_FILE, JSON.stringify([]));
+                }
+            }
+
+            // Ensure other files exist in localStorage
+            if (!localStorage.getItem(SET_FILE)) localStorage.setItem(SET_FILE, JSON.stringify([]));
+            if (!localStorage.getItem(PROP_FILE)) localStorage.setItem(PROP_FILE, JSON.stringify([]));
+            if (!localStorage.getItem(CHARACTER_FILE)) localStorage.setItem(CHARACTER_FILE, JSON.stringify([]));
         }
 
         // Tab management
@@ -418,7 +447,8 @@
         }
 
         // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', async function() {
+            await ensureSeedData();
             refreshLists();
             refreshCharacterForm();
         });
